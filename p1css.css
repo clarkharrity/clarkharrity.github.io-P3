@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .hero {
+    background: linear-gradient(to right, #0071C5, #00A6D6);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  .hero .logo {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+  .hero p {
+    font-size: 1rem;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: none;
+    padding: 40px 20px;
+  }
+  .timeline::-webkit-scrollbar {
+    height: 8px;
+  }
+  .timeline::-webkit-scrollbar-thumb {
+    background: #0071C5;
+    border-radius: 4px;
+  }
+  .timeline::-webkit-scrollbar-track {
+    background: #e0e0e0;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  .card h2 {
+    font-size: 1.1rem;
+    color: #0071C5;
+    margin: 10px;
+  }
+  .card h3 {
+    font-size: 1rem;
+    margin: 0 10px;
+  }
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+  }
+  .image-container img {
+    width: 100%;
+    display: block;
+  }
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .image-container:hover .overlay {
+    opacity: 1;
+  }
+  
+ 
+  .timeline-note {
+    text-align: center;
+    margin: 20px;
+    color: #666;
+    font-style: italic;
+  }
+  
+
+  @media (min-width: 768px) {
+    .timeline {
+      flex-direction: row-reverse;
+      scroll-snap-type: x mandatory;
+      scroll-padding: 20px;
+    }
+    .card {
+      flex: 0 0 300px;
+    }
+  }
+  
+  .three-column-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+  }
+  .three-column-section i {
+    margin-bottom: 10px;
+  }
+  .three-column-section h3 {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    color: #0071C5;
+  }
+  .three-column-section p {
+    font-size: 1rem;
+    color: #444;
+  }
+  .three-column-section .btn {
+    margin-top: 10px;
+  }
+  
+
+  .subscription-section {
+    background-color: #e6f2f8;
+    padding: 60px 20px;
+  }
+  .subscription-section h2 {
+    color: #0071C5;
+    margin-bottom: 20px;
+  }
+  .subscription-section label {
+    font-weight: bold;
+  }
+  .subscription-section .btn {
+    background-color: #0071C5;
+    color: white;
+  }
+  
+
+  footer {
+    background-color: #1a1a1a;
+    color: #ccc;
+    text-align: center;
+    padding: 20px 0;
+  }
+  footer a {
+    color: #ccc;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
